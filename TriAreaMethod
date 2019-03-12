@@ -1,0 +1,26 @@
+//method to calculate the area after the sides lengths have been calcualted
+
+public static triArea(double x1, double y1, double x2, double y2, double x3, double y3){
+
+double a = getDistance(x1, y1, x2, y2);
+double b = getDistance(x1, y1, x3, y3);
+double c = getDistance(x2, y2, x3. y3);
+
+//find the semiperimeter
+double s = .5 * (a + b + c);
+
+//find the area using Heron's formula
+double area = Math.sqrt(s * ((s-a) * (s-b) * (s-c)));
+
+//return the triangle's area
+return area;
+
+
+//method to find the sides of the triangle using the distance formula
+
+public static double getDistance(double x1, double y1, double x2, double y2){
+
+double distance = Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2));
+
+return distance;
+}
